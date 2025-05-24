@@ -1,1 +1,2 @@
-# Trabalho-LP
+# 📋 **Descrição**
+Trabalho desenvolvido em Python, que consiste em comparar diferentes formas de implementar algoritmos clássicos utilizando diferentes abordagens. O objetivo é analisar o impacto de cada abordagem no tempo de execução e no uso de memória, destacando vantagens e desvantagens práticas de cada estilo de implementação.
