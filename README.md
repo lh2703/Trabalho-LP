@@ -13,8 +13,8 @@ Trabalho desenvolvido em Python, que consiste em comparar formas de implementar 
 │   ├── fibonacci/
 │       ├──fib_iterativo.py              # Fibonacci iterativo
 │       ├──fib_recursivo.py              # Fibonacci recursivo
-│   ├── mdc/
-│       ├──mdc_iterativo.py              # MDC iterativo  
-│       ├──mdc_recursivo.py              # MDC recursivo
+│   ├── potencia/
+│       ├──potencia_iterativo.py              # MDC iterativo  
+│       ├──potencia_recursivo.py              # MDC recursivo
 ├── README.md                            # Documentação do projeto
 ```
