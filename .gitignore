@@ -1,0 +1,50 @@
+# Ambiente virtual local
+.venv/
+env/
+ENV/
+venv/
+
+# PyCharm
+.idea/
+
+# Bytecode do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Arquivos de log
+*.log
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de testes
+.coverage
+.tox/
+.nox/
+.cache/
+
+# Caches do pip
+pip-wheel-metadata/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Arquivos de Jupyter
+.ipynb_checkpoints/
+
+# VSCode (caso alguém abra no VSCode)
+.vscode/
+
+# Arquivos temporários
+*.tmp
+*.swp
+*.bak
+*.orig
+*.~
+
+# Configs de container ou CI (caso existam)
+docker-compose.override.yml
+.env
