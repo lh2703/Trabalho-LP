@@ -3,4 +3,4 @@ def fib_recursivo(n)
         return 0
     if n==1:
         return 1
-    return fiv(n-1) + fib (n-2)
+    return fib_recursivo(n-1) + fib_recursivo(n-2)
