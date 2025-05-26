@@ -14,7 +14,7 @@ Trabalho desenvolvido em Python, que consiste em comparar formas de implementar 
 │       ├──fib_iterativo.py              # Fibonacci iterativo
 │       ├──fib_recursivo.py              # Fibonacci recursivo
 │   ├── potencia/
-│       ├──potencia_iterativo.py              # MDC iterativo  
-│       ├──potencia_recursivo.py              # MDC recursivo
+│       ├──potencia_iterativo.py         # Potência iterativo
+│       ├──potencia_recursivo.py         # Potência recursivo
 ├── README.md                            # Documentação do projeto
 ```
