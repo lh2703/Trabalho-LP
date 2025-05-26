@@ -1,4 +1,4 @@
-def potencia_iterativo(n):
+def pot_iterativo(n):
     resultado = 1
     contador = 0
     while contador < n:
