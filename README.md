@@ -5,16 +5,15 @@ Trabalho desenvolvido em Python, que consiste em comparar formas de implementar 
 
 ```
 ├── src/                                      # Códigos da Aplicação
-│   ├── benchmark/
-│       ├──benchmark.py                      # Arquivo principal de teste
-│       ├── fatorial/
-│           ├──fat_iterativo.py              # Fatorial iterativo
-│           ├──fat_recursivo.py              # Fatorial recursivo
-│       ├── fibonacci/
-│           ├──fib_iterativo.py              # Fibonacci iterativo
-│           ├──fib_recursivo.py              # Fibonacci recursivo
-│       ├── potencia/
-│           ├──potencia_iterativo.py         # Potência iterativo
-│           ├──potencia_recursivo.py         # Potência recursivo
+│   ├──benchmark.py                      # Arquivo principal de teste
+│   ├── fatorial/
+│       ├──fat_iterativo.py              # Fatorial iterativo
+│       ├──fat_recursivo.py              # Fatorial recursivo
+│   ├── fibonacci/
+│       ├──fib_iterativo.py              # Fibonacci iterativo
+│       ├──fib_recursivo.py              # Fibonacci recursivo
+│   ├── potencia/
+│       ├──potencia_iterativo.py         # Potência iterativo
+│       ├──potencia_recursivo.py         # Potência recursivo
 ├── README.md                                # Documentação do projeto
 ```
