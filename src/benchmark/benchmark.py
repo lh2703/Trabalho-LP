@@ -1,7 +1,6 @@
 import time
 import matplotlib
-
-matplotlib.use('TkAgg')  # Força uso de interface gráfica
+matplotlib.use('tkAgg')  # Força uso de interface gráfica
 import matplotlib.pyplot as plt
 
 from fatorial.fat_iterativo import fat_iterativo
@@ -11,6 +10,18 @@ from fibonacci.fib_recursivo import fib_recursivo
 from potencia.pot_iterativo import pot_iterativo
 from potencia.pot_recursivo import pot_recursivo
 
+def plotar_grafico(valores_n, tempos_iterativo, tempos_recursivo, titulo_algoritmo):
+
+    plt.plot(valores_n, tempos_iterativo,'o-', label='Iterativo') #Gráfico Iterativo
+    plt.plot(valores_n, tempos_recursivo,'o-', label='Recursivo') #Gráfico Recursivo
+    plt.xlabel('Valor de n')
+    plt.ylabel('Tempo de execução (s)')
+    plt.title(f'Comparação de tempos: {titulo_algoritmo} Iterativo vs Recursivo')   #Titulo do algoritmo usado
+    plt.legend()                                                        #Ativa as legendas
+    plt.grid(True)                                                      #Grade para melhor visibilidade no gráfico.
+    plt.show()                                                          #Exibe o gráfico
+
+
 
 escolha = int(input("Escolha um algoritmo:\n1 - Fibonacci\n2 - Fatorial\n3 - Potência\nEscolha: "))
 
@@ -18,82 +29,74 @@ match escolha:
     case 1:
         print("Fibonacci!")
         n = int(input("Digite o valor de n: "))
+        while n <= 0:
+            n = int(input("Valor não suportado, digite outro: "))
+
         valores = list(range(1, n + 1))
         tempos_iterativo = []
         tempos_recursivo = []
+        titulo_algoritmo = "Fibonacci"
 
-        for n in valores:
+        for i in valores:
             inicio_iterativo = time.perf_counter()
-            fib_iterativo(n)
+            fib_iterativo(i)
             fim_iterativo = time.perf_counter()
             tempos_iterativo.append(fim_iterativo - inicio_iterativo)
 
             inicio_recursivo = time.perf_counter()
-            fib_recursivo(n)
+            fib_recursivo(i)
             fim_recursivo = time.perf_counter()
             tempos_recursivo.append(fim_recursivo - inicio_recursivo)
 
-        plt.plot(valores, tempos_iterativo, label='Iterativo')
-        plt.plot(valores, tempos_recursivo, label='Recursivo')
-        plt.xlabel('Valor de n')
-        plt.ylabel('Tempo de execução (s)')
-        plt.title('Comparação de tempos: Fibonacci Iterativo vs Recursivo')
-        plt.legend()
-        plt.grid(True)
-        plt.show()
+        plotar_grafico(valores, tempos_iterativo, tempos_recursivo, titulo_algoritmo)
 
     case 2:
         print("Fatorial!")
         n = int(input("Digite o valor de n: "))
+        while n <= 0:
+            n = int(input("Valor não suportado, digite outro: "))
 
         valores = list(range(1, n+1))
         tempos_iterativo = []
         tempos_recursivo = []
+        titulo_algoritmo = "Fatorial"
 
-        for n in valores:
+        for i in valores:
             inicio_iterativo = time.perf_counter()
-            fat_iterativo(n)
+            fat_iterativo(i)
             fim_iterativo = time.perf_counter()
             tempos_iterativo.append(fim_iterativo - inicio_iterativo)
 
             inicio_recursivo = time.perf_counter()
-            fat_recursivo(n)
+            fat_recursivo(i)
             fim_recursivo = time.perf_counter()
             tempos_recursivo.append(fim_recursivo - inicio_recursivo)
 
-        plt.plot(valores, tempos_iterativo, label='Iterativo')
-        plt.plot(valores, tempos_recursivo, label='Recursivo')
-        plt.xlabel('Valor de n')
-        plt.ylabel('Tempo de execução (s)')
-        plt.title('Comparação de tempos: Fatorial Iterativo vs Recursivo')
-        plt.legend()
-        plt.grid(True)
-        plt.show()
+        plotar_grafico(valores, tempos_iterativo, tempos_recursivo, titulo_algoritmo)
+
     case 3:
         print("Potência!")
-        n = int(input("Digite o expoente: "))
+        x = int(input("Digite o valor da base: "))
+        n = int(input("Digite o valor do expoente: "))
+
+
         valores = list(range(1, n + 1))
         tempos_iterativo = []
         tempos_recursivo = []
+        titulo_algoritmo = "Potência"
 
-        for n in valores:
+        for i in valores:
             inicio_iterativo = time.perf_counter()
-            pot_iterativo(n)
+            pot_iterativo(x, i)
             fim_iterativo = time.perf_counter()
             tempos_iterativo.append(fim_iterativo - inicio_iterativo)
 
             inicio_recursivo = time.perf_counter()
-            pot_recursivo(n)
+            pot_recursivo(x, i)
             fim_recursivo = time.perf_counter()
             tempos_recursivo.append(fim_recursivo - inicio_recursivo)
 
-        plt.plot(valores, tempos_iterativo, label='Iterativo')
-        plt.plot(valores, tempos_recursivo, label='Recursivo')
-        plt.xlabel('Valor de n')
-        plt.ylabel('Tempo de execução (s)')
-        plt.title('Comparação de tempos: Potência Iterativa vs Recursiva')
-        plt.legend()
-        plt.grid(True)
-        plt.show()
+        plotar_grafico(valores, tempos_iterativo, tempos_recursivo, titulo_algoritmo)
+
     case _:
         print("Escolha inválida.")
