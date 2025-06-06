@@ -8,11 +8,11 @@ Trabalho desenvolvido em Python que compara formas de implementar algoritmos clÃ
 Ao final, o sistema identifica qual abordagem apresenta **melhor desempenho geral**, com base em dados coletados dinamicamente.
 
 ## ðŸ“¦ Instale as bibliotecas utilizadas no terminal
-```
+```bash
 pip install -r requirements.txt
 ```
 Para desinstalar, execute:
-```
+```bash
 pip uninstall -r requirements.txt
 ```
 
