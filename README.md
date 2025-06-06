@@ -1,5 +1,20 @@
 # 📋 **Descrição**
-Trabalho desenvolvido em Python, que consiste em comparar formas de implementar algoritmos clássicos utilizando diferentes abordagens. O objetivo é analisar o impacto de cada abordagem no tempo de execução e no uso de memória, destacando vantagens e desvantagens de cada estilo de implementação.
+Trabalho desenvolvido em Python que compara formas de implementar algoritmos clássicos (iterativa vs. recursiva). O objetivo é analisar o impacto de cada abordagem no tempo de execução e uso de memória, destacando vantagens e desvantagens de cada estilo de implementação.
+
+
+- ⏱️ Tempo de execução
+- 🧠 Uso de memória
+
+Ao final, o sistema identifica qual abordagem apresenta **melhor desempenho geral**, com base em dados coletados dinamicamente.
+
+## 📦 Instale as bibliotecas utilizadas no terminal
+```
+pip install -r requirements.txt
+```
+Para desinstalar, execute:
+```
+pip uninstall -r requirements.txt
+```
 
 ## 📁**Estrutura do Projeto**
 
@@ -17,3 +32,4 @@ Trabalho desenvolvido em Python, que consiste em comparar formas de implementar 
 │       ├──mdc_recursivo.py              # MDC recursivo
 ├── README.md                            # Documentação do projeto
 ```
+
